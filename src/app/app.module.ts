@@ -11,7 +11,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'login/*', component: LoginComponent },
-  { path: 'main', loadChildren: './main/main.module#MainModule', data: { preload: true } },
+  // TODO: { path: 'main', loadChildren: './main/main.module#MainModule', data: { preload: true } },
 ];
 
 
