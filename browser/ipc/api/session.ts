@@ -1,4 +1,4 @@
-const screen = require('../../screen');
+const screen = require('../screen/index');
 
 module.exports = {
   login: async(e, user) => {
@@ -11,4 +11,4 @@ module.exports = {
     screen.setSize(700, 500);
     return { msg: 'ok' };
   },
-}
+};

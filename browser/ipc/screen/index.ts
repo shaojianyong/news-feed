@@ -1,7 +1,7 @@
 /**
  * Created by WittBulter on 2017/2/16.
  */
-const { BrowserWindow } = require('electron');
+
 const login = require('./login');
 
 // const console = require('./console');
@@ -12,9 +12,12 @@ const windowList = {
 
 module.exports = new class Screen {
 
+  win = null;
+  baseUrl = '';
+
   constructor() {
-    public win: any,
-    public baseUrl: string,
+    this.win = null;
+    this.baseUrl = '';
   }
 
   static show(win) {
@@ -39,7 +42,7 @@ module.exports = new class Screen {
   }
 
   activate() {
-    this.win === null && this.open();
+    return this.win === null && this.open();
   }
 
   setSize(w, h) {
