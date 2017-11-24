@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [{provide: LoginService, useClass: LoginService}],
 })
 export class LoginComponent implements OnInit {
 
@@ -23,7 +24,6 @@ export class LoginComponent implements OnInit {
     this.loginService.login({
       name: name,
       pw: pw,
-    })
-      .subscribe(next => this.router.navigate(['/main']));
+    }).subscribe(next => this.router.navigate(['/main']));
   }
 }

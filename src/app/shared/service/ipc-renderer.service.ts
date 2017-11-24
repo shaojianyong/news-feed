@@ -1,3 +1,5 @@
+// 与electron browser交互的代理
+
 import { Injectable } from '@angular/core';
 
 declare let electron: any;
